@@ -1,0 +1,531 @@
+id,title,description,preconditions,postconditions,tags,priority,severity,type,behavior,automation,status,is_flaky,layer,steps_type,steps_actions,steps_result,steps_data,milestone_id,milestone,suite_id,suite_parent_id,suite,suite_without_cases
+,,,,,,,,,,,,,,,,,,,,1,,Authorization,1
+,,,,,,,,,,,,,,,,,,,,2,,"Creation of a new employee",1
+,,,,,,,,,,,,,,,,,,,,4,,"Employee search",1
+,,,,,,,,,,,,,,,,,,,,5,,"Deleting an employee",1
+2,"Authorization by an existed user","Registered users can log in to the application using valid login and password","The user with login 'newfix' and password '123qwerty' should be created",,,high,blocker,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Go to the page https://fix-online.sbis.ru/
+2. Fill the form with login 'newfix' and password '123qwerty'
+3. Click on the log in button
+","1. The page should be opened
+2. The form should be filled with login 'newfix' and password '123qwerty'
+3. The form should be accepted and the user should be redirected to the main page
+","1. 
+2. 
+3. 
+",,,1,,Authorization,
+5,"Check the operation of the 'Forgot your password?' button","The 'Forgot your password?' button should operate correctly after clicking on it",,,,high,blocker,other,positive,is-not-automated,actual,no,unknown,classic,"1. Go to the page https://fix-online.sbis.ru/
+2. Click on the 'Forgot your password?' button
+3. Fill the form with login 'newfix'
+4. Click on the arrow button
+5. Click on the link
+","1. The page should be opened
+2. The user should be redirected to the password recovery page
+3. The form should be filled with 'newfix'
+4. A message with a link to technical support page should appear
+5. The link should operate correctly and the user should be redirected to the technical support page
+","1. 
+2. 
+3. 
+4. 
+5. 
+",,,1,,Authorization,
+6,"Check that the logout button is visible","When the user is authorized, the logout button should be easy to find on the main page","The user should be authorized",,,medium,minor,other,positive,is-not-automated,actual,no,unknown,classic,"1. Check if the logout button is placed on the main page and can be easy to find
+","1. The logout button should be placed on the main page and should be easily found
+","1. 
+",,,1,,Authorization,
+7,"The copy-paste function in the password input field should not work","The user cannot copy or paste the password with one click in the password field","The password '123qwerty' should be copied",,,medium,normal,other,positive,is-not-automated,actual,no,unknown,classic,"1. Go to the page https://fix-online.sbis.ru/
+2. Paste the copied password in the password field
+3. Fill the password field with '123qwerty'
+4. Highlight the password and copy it
+","1. The page should be opened
+2. The password cannot be inserted
+3. The password field should be filled with '123qwerty'
+4. The password cannot be copied
+","1. 
+2. 
+3. 
+4. 
+",,,1,,Authorization,
+8,"The password field mask the characters","When entering the password, the password characters should be masked",,,,medium,normal,other,positive,is-not-automated,actual,no,unknown,classic,"1. Go to the page https://fix-online.sbis.ru/
+2. Fill the login field with 'newfix'
+3. Fill the password field with '123qwerty'
+","1. The page should be opened
+2. The login field should be filled with 'newfix'
+3. The password field should be filled with '123qwerty' and the characters should be masked
+","1. 
+2. 
+3. 
+",,,1,,Authorization,
+9,"Check that the user is not logged out when clicking on the back arrow","After clicking on the back arrow, the user should not be logged out","The user with login 'newfix' and password '123qwerty' should be created",,,medium,minor,other,positive,is-not-automated,actual,no,unknown,classic,"1. Go to the page https://fix-online.sbis.ru/
+2. Fill the form with login 'newfix' and password '123qwerty' and log in
+3. Click on the back arrow
+","1. The page should be opened
+2. The user should be authorized and the main page should be opened
+3. The user should not be logged out
+","1. 
+2. 
+3. 
+",,,1,,Authorization,
+10,"Password field should be case sensitive",,"The user with login 'newfix' and password '123qwerty' should be created",,,high,major,other,positive,is-not-automated,actual,no,unknown,classic,"1. Go to the page https://fix-online.sbis.ru/
+2. Fill the login field with 'newfix'
+3. Fill the password field with '123QWERTY'
+4. Click on the log in button
+","1. The page should be opened
+2. The login field should be filled with 'newfix'
+3. The password field should be filled with '123QWERTY'
+4. A message stating that the password or login was entered incorrectly should appear
+","1. 
+2. 
+3. 
+4. 
+",,,1,,Authorization,
+11,"Authorization with an empty login field","We can not authorize with an empty login field","The user with login 'newfix' and password '123qwerty' should be created",,,high,blocker,other,negative,is-not-automated,actual,no,unknown,classic,"1. Go to the page https://fix-online.sbis.ru/
+2. Leave the login field empty
+3. Fill the password field with '123qwerty'
+4. Click on the log in button
+","1. The page should be opened
+2. The login field should be empty
+3. The password field should be filled with '123qwerty'
+4. A message stating that the password or login was entered incorrectly should appear
+","1. 
+2. 
+3. 
+4. 
+",,,1,,Authorization,
+12,"Authorization with an empty password field","We cannot authorize with an empty password field","The user with login 'newfix' and password '123qwerty' should be created",,,high,major,other,negative,is-not-automated,actual,no,unknown,classic,"1. Go to the page https://fix-online.sbis.ru/
+2. Fill the login field with 'newfix'
+3. Leave the password field empty
+4. Click on the log in button
+","1. The page should be opened
+2. The login field should be filled with 'newfix'
+3. The password field should be empty
+4. A message stating that the password or login was entered incorrectly should appear
+","1. 
+2. 
+3. 
+4. 
+",,,1,,Authorization,
+13,"Authorization with valid login and an arbitrary password","We cannot authorize with an arbitrary password","The user with login 'newfix' and password '123qwerty' should be created",,,high,critical,other,negative,is-not-automated,actual,no,unknown,classic,"1. Go to the page https://fix-online.sbis.ru/
+2. Fill the login field with 'newfix'
+3. Fill the password field with arbitrary characters (e.g. 'qaser')
+4. Click on the log in button
+","1. The page should be opened
+2. The login field should be filled with 'newfix'
+3. The password field should be filled with arbitrary characters
+4. A message stating that the password or login was entered incorrectly should appear
+","1. 
+2. 
+3. 
+4. 
+",,,1,,Authorization,
+14,"Authorization with an arbitrary login and valid password","We cannot authorize with arbitrary login",,,,high,critical,other,negative,is-not-automated,actual,no,unknown,classic,"1. Go to the page https://fix-online.sbis.ru/
+2. Fill the login field with arbitrary characters (e.g. 'besef')
+3. Fill the password field with '123qwerty'
+4. Click on the log in button
+","1. The page should be opened
+2. The login field should be filled with arbitrary characters
+3. The password field should be filled with '123qwerty'
+4. A message stating that the password or login was entered incorrectly should appear
+","1. 
+2. 
+3. 
+4. 
+",,,1,,Authorization,
+23,"Check the operation of the 'Access to the system' button",,"* The website https://fix-online.sbis.ru/ is opened
+* The user has been authorized",,,high,major,other,positive,is-not-automated,actual,no,unknown,classic,"1. Go to 'Employees'
+2. Click on button '+' to create new user and select 'employee'
+3. Click on the checkbox 'Access to the system'
+","1. The page 'Employees' should be opened
+2. Form with fields 'Last name', 'First name', 'Patronymic' should appear
+3. The checkbox should be ticked and additional fields should appear
+","1. 
+2. 
+3. 
+",,,1,,Authorization,
+24,"Check the function of adding a photo","The function of adding the photo should work correctly","* The website https://fix-online.sbis.ru/ is opened
+* The user has been authorized",,,high,critical,other,positive,is-not-automated,actual,no,unknown,classic,"1. Go to 'Employees'
+2. Click on button '+' to create new user and select 'employee'
+3. Fill the first name field with 'Елизавета' and the last name field with 'Андреева'
+4. Click on the 'Add' button
+5. Select 'From the computer'
+6. Select any photo from your computer and click on the tick button
+","1. The page 'Employees' should be opened
+2. Form with the fields 'Last name', 'First name', 'Patronymic' should be opened
+3. The field should be filled
+4. The button should be clickable
+5. The option 'From the computer' can be selected
+6. The photo should be uploaded
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+",,,1,,Authorization,
+25,"Check the operation of the 'Go to the detailed card' button","The 'Go to the detailed card' button should operate correctly when clicking on it","* The website https://fix-online.sbis.ru/ is opened
+* The user has been authorized",,,high,major,other,positive,is-not-automated,actual,no,unknown,classic,"1. Go to 'Employees'
+2. Click on button '+' to create new user and select 'employee'
+3. Click on the 'Go to the detailed card' button (next to the save button)
+","1. The page 'Employees' should be opened
+2. Form with the fields 'Last name', 'First name', 'Patronymic' should be opened
+3. A more detailed form should appear
+","1. 
+2. 
+3. 
+",,,1,,Authorization,
+1,"Create a new employee","We can create a new employee by entering last name, first name and patronymic","* The website https://fix-online.sbis.ru/ is opened
+* The user has been authorized",,,high,critical,other,positive,is-not-automated,actual,no,unknown,classic,"1. Go to 'Employees'
+2. Click on button '+' to create a new employee and select 'employee'
+3. Fill the form with the following credentials:
+Last name: Егорова
+First name: Екатерина
+Patronymic: Алексеевна
+4. Click on the 'Save' button
+","1. The page 'Employees' should be opened
+2. Form with fields 'Last name', 'First name', 'Patronymic' should be opened
+3. The form should be filled with last name 'Егорова', first name 'Екатерина' and patronymic 'Алексеевна'
+4. New employee should be created
+","1. 
+2. 
+3. 
+4. 
+",,,2,,"Creation of a new employee",
+15,"Create a new employee with name only","We cannot create a new employee by filling only the first name field","* The website https://fix-online.sbis.ru/ is opened
+* The user has been authorized",,,high,critical,other,negative,is-not-automated,actual,no,unknown,classic,"1. Go to 'Employees'
+2. Click on button '+' to create a new employee and select 'employee'
+3. Fill the first name field with 'Анна'
+4. Click on the 'Save' button
+","1. The page 'Employees' should be opened
+2. Form with the fields 'Last name', 'First name', 'Patronymic' should appear
+3. The first name field should be filled with 'Анна'
+4. A message stating that the first and last name fields must be filled should appear
+","1. 
+2. 
+3. 
+4. 
+",,,2,,"Creation of a new employee",
+16,"Create a new employee with the last name only","We cannot create a new employee by entering only the last name and leaving the first name field empty","* The website https://fix-online.sbis.ru/ is opened
+* The user has been authorized",,,high,critical,other,negative,is-not-automated,actual,no,unknown,classic,"1. Go to 'Employees'
+2. Click on button '+' to create a new employee and select 'employee'
+3. Fill the last name field with 'Никифорова'
+4. Click on the 'Save' button
+","1. The page 'Employees' should be opened
+2. Form with the fields 'Last name', 'First name', 'Patronymic' should be opened
+3. The last name field should be filled with 'Никифорова'
+4. A message stating that the first and last name fields must be filled should appear
+","1. 
+2. 
+3. 
+4. 
+",,,2,,"Creation of a new employee",
+17,"Create a new employee with the patronymic only","We cannot create a new employee by filling only the patronymic field","* The website https://fix-online.sbis.ru/ is opened
+* The user has been authorized",,,high,critical,other,positive,is-not-automated,actual,no,unknown,classic,"1. Go to 'Employees'
+2. Click on button '+' to create a new employee and select 'employee'
+3. Fill the patronymic field with 'Дмитриевна'
+4. Click on the 'Save' button
+","1. The page 'Employees' should be opened
+2. Form with the fields 'Surname', 'Name', 'Patronymic' should be opened
+3. The patronymic field should be filled with 'Дмитриевна'
+4. A message stating that the first and last name fields must be filled should appear
+","1. 
+2. 
+3. 
+4. 
+",,,2,,"Creation of a new employee",
+18,"Create a new employee with the last name and patronymic only","We cannot create a new employee by filling only the last name and patronymic fields","* The website https://fix-online.sbis.ru/ is opened
+* The user has been authorized",,,high,critical,other,negative,is-not-automated,actual,no,unknown,classic,"1. Go to 'Employees'
+2. Click on button '+' to create a new employee and select 'employee'
+3. Fill the last name field with 'Егорова'
+4. Fill the patronymic field with 'Алексеевна'
+5. Click on the 'Save' button
+","1. The page 'Employees' should be opened
+2. Form with the fields 'Last name', 'First name', 'Patronymic' should be opened
+3. The last name field should be filled with 'Егорова'
+4. The patronymic field should be filled with 'Алексеевна'
+5. A message stating that the first and last name fields must be filled should appear
+","1. 
+2. 
+3. 
+4. 
+5. 
+",,,2,,"Creation of a new employee",
+19,"Create a new employee with position only","We cannot create a new employee by filling only the position field","* The website https://fix-online.sbis.ru/ is opened
+* The user has been authorized",,,high,critical,other,negative,is-not-automated,actual,no,unknown,classic,"1. Go to 'Employees'
+2. Click on button '+' to create a new employee and select 'employee'
+3. Fill the position field with 'QA engineer'
+4. Click on the 'Save' button
+","1. The page 'Employees' should be opened
+2. Form with the fields 'Last name', 'First name', 'Patronymic' should be opened
+3. The position field should be filled with 'QA engineer'
+4. The button should not be clickable or a message stating that the first and last name fields must be filled should appear
+","1. 
+2. 
+3. 
+4. 
+",,,2,,"Creation of a new employee",
+20,"Create a new employee with the telephone number only","We cannot create a new employee by filling only the telephone number field","* The website https://fix-online.sbis.ru/ is opened
+* The user has been authorized",,,high,critical,other,negative,is-not-automated,actual,no,unknown,classic,"1. Go to 'Employees'
+2. Click on button '+' to create new user and choose 'employee'
+3. Fill the telephone number field with '79057850308'
+4. Click on the 'Save' button
+","1. The page 'Employees' should be opened
+2. Form with the fields 'Last name', 'First name', 'Patronymic' should appear
+3. The telephone number field should be filled with '79057850308'
+4. The button should not be clickable or a message stating that the first and last name fields must be filled should appear
+","1. 
+2. 
+3. 
+4. 
+",,,2,,"Creation of a new employee",
+21,"Create a new employee with special symbols","We cannot create a new employee by entering special symbols into the first name and last name fields","* The website https://fix-online.sbis.ru/ is opened
+* The user has been authorized",,,high,critical,other,negative,is-not-automated,actual,no,unknown,classic,"1. Go to 'Employees'
+2. Click on button '+' to create a new employee and select 'employee'
+3. Fill the first name field with '!%\~'
+4. Fill the last name field with '!%\~'
+5. Click on the 'Save' button
+","1. The page 'Employees' should be opened
+2. Form with the fields 'Last name', 'First name', 'Patronymic' should be opened
+3. The first name field should be filled with '!%\~'
+4. The last name field should be filled with '!%\~'
+5. The button should not be clickable or a message stating that the first and last name fields must be filled only with letters should appear
+","1. 
+2. 
+3. 
+4. 
+5. 
+",,,2,,"Creation of a new employee",
+22,"Create a new employee with numbers only","We cannot create a new employee by entering numbers into the first name and last name fields","* The website https://fix-online.sbis.ru/ is opened
+* The user has been authorized",,,high,critical,other,negative,is-not-automated,actual,no,unknown,classic,"1. Go to 'Employees'
+2. Click on button '+' to create a new employee and select 'employee'
+3. Fill the first name field with '12345'
+4. Fill the last name field with '12345'
+5. Click on the 'Save' button
+","1. The page 'Employees' should be opened
+2. Form with the fields 'Last name', 'First name', 'Patronymic' should appear
+3. The first name field should be filled with '12345'
+4. The last name field should be filled with '12345'
+5. The button should not be clickable or a message stating that the first and last name fields must be filled only with letters should appear
+","1. 
+2. 
+3. 
+4. 
+5. 
+",,,2,,"Creation of a new employee",
+26,"Filling the telephone number field with letters","We cannot create a new employee by filling the telephone number field with letters","* The website https://fix-online.sbis.ru/ is opened
+* The user has been authorized",,,high,major,other,negative,is-not-automated,actual,no,unknown,classic,"1. Go to 'Employees'
+2. Click on button '+' to create a new employee and select 'employee'
+3. Fill the first name field with 'Юлия' and the last name field with 'Егорова'
+4. Fill the telephone number field with letters (e.g. 'abcde')
+","1. The page 'Employees' should be opened
+2. Form with the fields 'Last name', 'First name', 'Patronymic' should appear
+3. The first name field is filled with 'Юлия' and the last name field is filled with 'Егорова'
+4. It should not be possible to enter letters
+","1. 
+2. 
+3. 
+4. 
+",,,2,,"Creation of a new employee",
+27,"Employee search is filtered by personnel number",,"* The website https://fix-online.sbis.ru/ is opened
+* The user has been authorized
+* An employee with the personnel number '444' has been created",,,medium,major,other,positive,is-not-automated,actual,no,unknown,classic,"1. Go to 'Employees'
+2. Click on the hamburger button
+3. Tick the personnel number option
+4. Uncheck the other checkboxes
+5. Click on the close button
+6. Enter '444' in the search box
+","1. The page 'Employees' should be opened
+2. The hamburger button should unfold
+3. The personnel number option should be ticked
+4. The other checkboxes should be unchecked
+5. The close button should be clickable
+6. The search engine should return an employee with the personnel number '444'
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+",,,4,,"Employee search",
+28,"Employee search is filtered by ID",,"* The website https://fix-online.sbis.ru/ is opened
+* The user has been authorized
+* An employee with ID '123' has been created",,,medium,major,other,positive,is-not-automated,actual,no,unknown,classic,"1. Go to 'Employees'
+2. Click on the hamburger button
+3. Tick the ID option
+4. Uncheck the other checkboxes
+5. Click on the close button
+6. Enter '123' in the search box
+","1. The page 'Employees' should be opened
+2. The hamburger button should unfold
+3. The full name option should be ticked
+4. The other checkboxes should be unchecked
+5. The close button should be clickable
+6. The search engine should return an employee with ID '123'
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+",,,4,,"Employee search",
+29,"Employee search is filtered by full name",,"* The website https://fix-online.sbis.ru/ is opened
+* The user has been authorized
+* An employee with the name 'Егорова Екатерина Алексеевна' should be created",,,medium,major,other,positive,is-not-automated,actual,no,unknown,classic,"1. Go to 'Employees'
+2. Click on the hamburger button
+3. Tick the full name option
+4. Uncheck the other checkboxes
+5. Click on the close button
+6. Enter 'Егорова Екатерина Алексеевна' in the search box
+","1. The page 'Employees' should be opened
+2. The hamburger button should unfold
+3. The full name option should be ticked
+4. The other checkboxes should be unchecked
+5. The close button should be clickable
+6. The search engine should return an employee with the name 'Егорова Екатерина Алексеевна'
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+",,,4,,"Employee search",
+30,"Employee search is filtered by 'Telephone number'",,"* The website https://fix-online.sbis.ru/ is opened
+* The user has been authorized
+* An employee with the telephone number '89057840408' has been created",,,medium,major,other,positive,is-not-automated,actual,no,unknown,classic,"1. Go to 'Employees'
+2. Click on the hamburger button
+3. Tick the telephone number option
+4. Uncheck the other checkboxes
+5. Click on the close button
+6. Enter '89057840408' in the search box
+","1. The page 'Employees' should be opened
+2. The hamburger button should unfold
+3. The telephone number option should be ticked
+4. The other checkboxes should be unchecked
+5. The close button should be clickable
+6. The search engine should return an employee with the telephone number '89057840408'
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+",,,4,,"Employee search",
+31,"Employee search is filtered by 'e-mail'",,"* The website https://fix-online.sbis.ru/ is opened
+* The user has been authorized
+* An employee with the e-mail 'test2325@mail.ru' has been created",,,medium,major,other,positive,is-not-automated,actual,no,unknown,classic,"1. Go to 'Employees'
+2. Click on the hamburger button
+3. Tick the e-mail option
+4. Uncheck the other checkboxes
+5. Click on the close button
+6. Enter 'test2325@mail.ru' in the search box
+","1. The page 'Employees' should be opened
+2. The hamburger button should unfold
+3. The e-mail option should be ticked
+4. The other checkboxes should be unchecked
+5. The close button should be clickable
+6. The search engine should return an employee with the e-mail 'test2325@mail.ru'
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+",,,4,,"Employee search",
+32,"Employee search is filtered by login",,"* The website https://fix-online.sbis.ru/ is opened
+* The user has been authorized
+* An employee with the login ''login4567 has been created",,,medium,major,other,positive,is-not-automated,actual,no,unknown,classic,"1. Go to 'Employees'
+2. Click on the hamburger button
+3. Tick the login option
+4. Uncheck the other checkboxes
+5. Click on the close button
+6. Enter 'login4567' in the search box
+","1. The page 'Employees' should be opened
+2. The hamburger button should unfold
+3. The login option should be ticked
+4. The other checkboxes should be unchecked
+5. The close button is clickable
+6. The search engine should return an employee with the login 'login4567'
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+",,,4,,"Employee search",
+33,"Employee search is filtered by an insurance number of an individual personal account",,"* The website https://fix-online.sbis.ru/ is opened
+* The user has been authorized
+* An employee with the insurance number of an individual personal account '116-973-385 89' has been created",,,medium,major,other,positive,is-not-automated,actual,no,unknown,classic,"1. Go to 'Employees'
+2. Click on the hamburger button
+3. Tick the insurance number of an individual personal account option
+4. Uncheck the other checkboxes
+5. Click on the close button
+6. Enter '116-973-385 89' in the search box
+","1. The page 'Employees' should be opened
+2. The hamburger button should unfold
+3. The insurance number of an individual personal account option should be ticked
+4. The other checkboxes should be unchecked
+5. The close button should be clickable
+6. The search engine should return an employee with the insurance number of an individual personal account '116-973-385 89'
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+",,,4,,"Employee search",
+34,"Employee search is filtered by TIN",,"* The website https://fix-online.sbis.ru/ is opened
+* The user has been authorized
+* An employee with the TIN '**500100732259**' has been created",,,medium,major,other,positive,is-not-automated,actual,no,unknown,classic,"1. Go to 'Employees'
+2. Click on the hamburger button
+3. Tick the TIN option
+4. Uncheck the other checkboxes
+5. Click on the close button
+6. Enter '500100732259' in the search box
+","1. The page 'Employees' should be opened
+2. The hamburger button should unfold
+3. The TIN option should be ticked
+4. The other checkboxes should be unchecked
+5. The close button should be clickable
+6. The search engine should return an employee with the TIN '500100732259'
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+",,,4,,"Employee search",
+4,"Delete an employee","We can delete an employee from the database","* The website https://fix-online.sbis.ru/ is opened
+* The user has been authorized
+* An employee with the name 'Егорова Елена' has been created",,,high,normal,other,positive,is-not-automated,actual,no,unknown,classic,"1. Go to 'Employees'
+2. Enter 'Егорова Елена' in the search box
+3. Сlick on the kebab menu icon
+4. Click on 'Удалить'
+5. Click on 'Да'
+","1. The page 'Employees' should be opened
+2. The search engine should return an employee with the name 'Егорова Елена'
+3. Kebab menu icon should unfold
+4. A confirmation form with variants 'Да' and 'Нет' should appear
+5. The employee should be removed from the database
+","1. 
+2. 
+3. 
+4. 
+5. 
+",,,5,,"Deleting an employee",
+35,"Check the operation of 'No' button","When deleting an employee, we can cancel it by clicking on 'No' button","* The website https://fix-online.sbis.ru/ is opened
+* The user has been authorized
+* An employee with the name 'Егорова Елена' has been created",,,high,critical,other,positive,is-not-automated,actual,no,unknown,classic,"1. Go to 'Employees'
+2. Enter 'Егорова Елена' in the search box
+3. Сlick on the kebab menu icon
+4. Click on 'Удалить'
+5. Click on 'No'
+","1. The page 'Employees' should be opened
+2. The search engine should return an employee with the name 'Егорова Елена'
+3. Kebab menu icon should unfold
+4. A confirmation form with variants 'Да' and 'Нет' should appear
+5. Deletion should be canceled
+","1. 
+2. 
+3. 
+4. 
+5. 
+",,,5,,"Deleting an employee",
